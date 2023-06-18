@@ -2,6 +2,76 @@
 <head>
   <head>
     <link rel="icon" type="image/x-icon" href="images/icon-01.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #000000;
+  border-radius: 50%;
+  border-top: 16px solid #7d6939;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
   </head>
   <body>
     <meta charset="UTF-8">
@@ -30,20 +100,20 @@
   <header class="d-print-none">
     <div class="container text-center text-lg-left">
       <div class="pt-4 clearfix">
-        <h1 class="site-title mb-0">A4 FOOTBALL CLUB</h1>
+        <h1 style="color: #7d6939;" class="site-title mb-0">A4 FOOTBALL CLUB</h1>
         <div class="site-nav"> 
           <nav role="navigation">
             <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="index.html" title="Home"><span class="menu-title">Trang Chủ</span></a>
+                <li class="nav-item"><a class="nav-link" href="index.html" title="Home"><span class="menu-title" style="color: #7d6939;">Trang Chủ</span></a>
                 </li>
-              <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">Giới Thiệu</span></a>
+              <li class="nav-item"><a class="nav-link" href="index.html#about" title="About"><span class="menu-title" style="color: #7d6939;">Giới Thiệu</span></a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Kỹ Năng</span></a>
+              <li class="nav-item"><a class="nav-link" href="index.html#skills" title="Skills"><span class="menu-title" style="color: #7d6939;">Kỹ Năng</span></a>
               </li>
 
-              <li class="nav-item"><a class="nav-link" href="#references" title="References"><span class="menu-title">Đội Hình</span></a>
+              <li class="nav-item"><a class="nav-link" href="team.html" title="References"><span class="menu-title" style="color: #7d6939;">Đội Hình</span></a>
               </li>
-              <li class="nav-item"><a class="nav-link" href="match.html" title="References"><span class="menu-title">Trận Đấu</span></a>
+              <li class="nav-item"><a class="nav-link" href="match.html" title="References"><span class="menu-title" style="color: #7d6939;">Trận Đấu</span></a>
               </li>
               
             </ul>
@@ -370,6 +440,9 @@ html {
     </div>
   </div>
   <p>A4 FOOTBALL CLUB OFFICIAL WEBSITE</p>
+  <div class="row">
+    <div class="grid-item"><img  src="images/Spotify_Logo_CMYK_Green.png" width="150px" alt=""></div>
+  </div>
     <style>
       p {
         text-align: center;

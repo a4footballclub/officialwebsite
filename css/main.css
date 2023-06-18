@@ -140,3 +140,9 @@ footer a:not(.nav-link) {
   .page-break {
     padding-top: 5rem;
     page-break-before: always; } }
+
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
